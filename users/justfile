@@ -1,0 +1,23 @@
+build: 
+	go build -o ./bin/app ./cmd/main.go
+
+run:
+	go run ./cmd/main.go
+
+test:
+	go test -cover ./...
+
+docker-build:
+	docker build -t mhiri/chronobreak:latest .
+
+docker-run:
+	docker run -it --rm -p 8080:8080 mhiri/chronobreak:latest
+
+compose-up:
+	docker-compose up -d
+
+compose-down:
+	docker-compose down
+
+clean:
+	rm -rf ./bin
