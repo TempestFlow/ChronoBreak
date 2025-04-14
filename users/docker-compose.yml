@@ -1,7 +1,7 @@
 services:
   pg:
     image: postgres:alpine
-    container_name: pg
+    container_name: users-pg
     restart: always
     ports:
       - 5432:5432
@@ -9,3 +9,9 @@ services:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=root
       - POSTGRES_DB=users
+  redis:
+    image: redis:alpine
+    container_name: users-redis
+    restart: always
+    ports:
+      - 6379:6379
