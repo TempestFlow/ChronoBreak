@@ -1,6 +1,6 @@
 services:
   pg:
-    image: postgres:alpine
+    image: postgres:latest
     container_name: users-pg
     restart: always
     ports:
