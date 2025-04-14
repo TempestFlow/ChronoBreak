@@ -5,12 +5,11 @@ package users.v1;
 option go_package = "github.com/mhirii/chronobreak/users/proto/users/v1";
 
 service AuthService {
-	rpc GetUser(GetUserRequest) returns (GetUserResponse);
 	rpc Login(LoginRequest) returns (LoginResponse);
 	rpc Signup(SignupRequest) returns (SignupResponse);
 	rpc RefreshToken(RefreshTokenRequest) returns (RefreshTokenResponse);
 	rpc GetUser(GetUserRequest) returns (GetUserResponse);
-	rpc GetUserByID(GetUserIDRequest) returns (GetUserIDResponse);
+	rpc GetUserByID(GetUserByIDRequest) returns (GetUserByIDResponse);
 	rpc Logout(LogoutRequest) returns (LogoutResponse);
 }
 
@@ -50,10 +49,10 @@ message GetUserResponse {
   string email = 3;
 }
 
-message GetUserIDRequest {
+message GetUserByIDRequest {
   string id = 1;
 }
-message GetUserIDResponse {
+message GetUserByIDResponse {
   string id = 1;
   string username = 2;
   string email = 3;
