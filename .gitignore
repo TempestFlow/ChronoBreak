@@ -1,5 +1,4 @@
-users/.env
-users/bin
-users/configs/.env
-users/logs/cmd.log
-users/tmp
+**/*.env
+*/bin
+*/logs
+*/tmp
