@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package users.v1;
 
-option go_package = "github.com/mhirii/chronobreak/users/proto/users/v1";
+option go_package = "github.com/mhirii/chronobreak/users/internal/api/users/v1";
 
 service AuthService {
 	rpc Login(LoginRequest) returns (LoginResponse);
@@ -11,6 +11,7 @@ service AuthService {
 	rpc GetUser(GetUserRequest) returns (GetUserResponse);
 	rpc GetUserByID(GetUserByIDRequest) returns (GetUserByIDResponse);
 	rpc Logout(LogoutRequest) returns (LogoutResponse);
+	rpc Validate(ValidateRequest) returns (ValidateResponse);
 }
 
 message LoginRequest {
@@ -63,4 +64,11 @@ message LogoutRequest {
 }
 message LogoutResponse {
   string access_token = 1;
+}
+
+message ValidateRequest {
+  string access_token = 1;
+}
+message ValidateResponse {
+  bool valid = 1;
 }

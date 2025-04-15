@@ -2,7 +2,12 @@ module github.com/mhirii/chronobreak/users
 
 go 1.24.1
 
-require gofr.dev v1.37.0
+require (
+	github.com/Oudwins/zog v0.19.1
+	gofr.dev v1.37.0
+	google.golang.org/grpc v1.71.1
+	google.golang.org/protobuf v1.36.6
+)
 
 require (
 	cloud.google.com/go v0.120.0 // indirect
@@ -88,8 +93,6 @@ require (
 	google.golang.org/genproto v0.0.0-20250303144028-a0af3efb3deb // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20250313205543-e70fdf4c4cb4 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20250313205543-e70fdf4c4cb4 // indirect
-	google.golang.org/grpc v1.71.1 // indirect
-	google.golang.org/protobuf v1.36.6 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	modernc.org/libc v1.62.1 // indirect
 	modernc.org/mathutil v1.7.1 // indirect
